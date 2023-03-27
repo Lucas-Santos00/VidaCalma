@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Default to all browsers settings */
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    background-color: #ffff;
+}
+
+/* Font Styles */
+
+h1, p{
+    color: #F6F7EB;
+    min-width: 300px;
+}
+
+h1{
+    font-weight: 700;
+}
+
+p{
+    font-weight: 400;
+}
+
+#bold-area{
+    font-weight: 600;
+}
+
+/* Geral Styles */
+
+#blue-background{
+    background-color: #1098F7;
+    z-index: 0;
+    position: absolute;
+        top: 0;
+    width: 100vw;
+    min-height: 249px;
+}
+
+header{
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+
+button{
+    border: none;
+    font-weight: 600;
+    color: #F6F7EB;
+    background-color: #5DDE66;
+    box-shadow: 0px 3.31579px 18.9474px rgba(86, 255, 98, 0.65);
+    cursor: pointer;
+}
+
+/* Mobile Styles*/
+
+@media only screen and (max-width: 991px){
+
+    #desktop-image{
+        display: none;
+    }
+
+    body{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1,p{
+        width: 80vw;
+    }
+
+    #blue-background{
+        height: 85.125vw;
+        max-height: 534px;
+    }
+
+    h1{
+        margin: 30px 0 4.375vw 0;
+        font-size: 6.25vw;
+    }
+
+    p{
+        font-size: 4.375vw;
+    }
+
+    img{
+        margin: 7.5vw 0 10.625vw 0;
+        width: 60vw;
+        max-width: 500px;
+    }
+
+    button{ 
+        margin-top: 32px;
+        border-radius: 5.921875vw;
+        width: 73vw;
+        font-size: 4.928125vw;
+        padding: 3.125vw 0;
+    }
+
+    #special-paragraph{
+        color: #100B00;
+    }
+
+    @media (min-width: 927px) {
+        h1{
+            font-size: 55px
+        }
+    }
+
+    @media (min-width: 690px) {
+        p{
+            font-size: 30px
+        }
+
+        button{
+            font-size: 30px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 992px){
+
+    body{
+        zoom: 1;
+    }
+
+    #mobile-image{
+        display: none;
+    }
+
+    #text-container{
+        width: 36.5vw;
+        min-width: 310px;
+        max-width: 520px;
+        overflow: visible;
+    }
+
+    #special-paragraph{ 
+        margin: 0;
+    }
+
+    #blue-background{
+        height: 33.083vw;
+        max-height: 482px;
+    }
+
+    img{
+        width: 29.250694vw;
+        max-width: 422px;
+    }
+
+    header{
+        display: flex;
+        max-width: 1440px;
+        justify-content: space-between;
+        padding: 6.1vw 8.6805vw 0 12.5694vw;
+    }
+
+    h1{
+        font-size: 2.77vw;
+    }
+
+    p{
+        font-size: 1.66vw;
+        margin: 2.083vw 0 4.72vw 0;
+    }
+
+    button{
+        margin-top: 3.75vw;
+        width: 100%;
+        font-size: 2.3125vw;
+        padding: 1.6vw;
+        border-radius: 2.77vw;
+        transition: transform 0.6s ease-out;
+    }
+
+    button:hover{
+        transform: scale(1.05);
+    }
+
+    @media screen and (min-width: 1440px) {
+
+        h1{
+            font-size: 40px;
+        }
+
+        p{
+            font-size: 24px;
+            margin: 30px 0 68px 0;
+        }
+
+        button{
+            padding: 24px 0;
+            font-size: 33.3px;
+            margin-top: 54px;
+        }
+
+        #text-container{
+            margin-right: 151px;
+        }
+
+        header{
+            padding: 88px 0 0 0;
+            margin: auto;
+            justify-content: center;
+        }
+    }
+
+    ::-webkit-scrollbar{
+        width: 8px;
+        background-color: #fff;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: #1098F7;
+        width: 8px;
+        height: 30px;
+    }
+    }
