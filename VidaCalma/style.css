@@ -1,0 +1,859 @@
+/* Normalize CSS */
+button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup.top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* VARIABLES */
+
+:root{
+    --color-blue: #1098F7;
+    --color-green: #5DDE66;
+    --color-background-black: #3C3C3C;
+    --color-strong-text: #1F2011;
+}
+
+
+/* GLOBAL STYLES - GET MOBILE/DES.TOP */
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #fff;
+    color: #171717;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+section.top{
+    background-color: var(--color-background-black);
+}
+
+strong{
+    font-weight: 700;
+}
+
+header section.top h1{
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    line-height: 128.9%;
+    font-size: 8.75vw;
+}
+
+header section.bottom h2, header section.bottom h3{
+    text-align: center;
+    font-weight: 400;
+    line-height: 128.9%;
+    font-size: 8.75vw;
+}
+
+header section.bottom strong{
+    font-weight: 700;
+    color: var(--color-blue);
+}
+
+header section.top h1 strong{
+    font-weight: 700;
+}
+
+h1, h2, h3{
+    text-align: center;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: #F6F7EB;
+    line-height: 164.4%;
+    font-weight: 600;
+    background-color: var(--color-green);
+    box-shadow: 0px 3.31579px 18.9474px rgba(86, 255, 98, 0.65);
+}
+
+p{
+    line-height: 164.4%;
+}
+
+section.steps .step .img-container{
+    position: relative;
+}
+
+section.steps .step .img-container img{
+    position: relative;
+    z-index: 99;
+    width: 95px;
+}
+
+section.steps{
+    background-color: var(--color-blue);
+}
+
+section.steps .step .img-container .background{
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background-color: #FFF
+}
+
+section.steps .step .text-area{
+    padding-top: 24px;
+    color: #FDFDFD;
+}
+
+section.steps .step .text-area h6{
+    margin-bottom: 14px;
+}
+
+section.steps .btn-container{
+    display: none;
+}
+
+section.sell{
+    position: relative;
+}
+
+section.sell .background{
+    position: absolute;
+    z-index: 0;
+    top: -1px;
+    left: 0;
+    width: 100vw;
+    background-color: var(--color-blue);
+}
+
+section.sell .img-container picture img{
+    position: relative;
+    z-index: 999;
+}
+
+section.sell .text-area p{
+    margin: 0 auto;
+    color: #1F2011;
+}
+
+section.sell .text-area span{
+    font-weight: 700;
+    color: var(--color-blue);
+}
+
+section.sell .second-text-area{
+    color: #545454;
+}
+
+footer{
+    padding: 24px 0 35px 0;
+    overflow: hidden;
+    background-color: #F6F6F6;
+    color: #808080;
+}
+
+footer .lists-containers{
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer .lists-containers ul:nth-child(1){
+    margin-left: 33.16px;
+}
+
+footer .lists-containers ul{
+    list-style: none;
+    width: 259px;
+    font-size: 15.3px;
+}
+
+footer .lists-containers ul .title{
+    margin-bottom: 9.6px;
+    font-weight: 700;
+    font-size: 15.93px;
+    color: #000;
+}
+
+footer .direitos-reservados{
+    margin-top: 48.5px;
+    text-align: center;
+    width: 100vw;
+}
+
+/* MOBILE STYLES */
+
+@media screen and (max-width: 768px) {
+
+    body{
+        text-align: center;
+    }
+ 
+    h1, h2, h3{
+        width: 84.625vw;
+    }
+
+    header section.bottom h3{
+        margin-top: 58px;
+    }
+
+    h1{
+        width: 71.5625vw;
+    }
+
+    header section.top{
+        padding: 54px 0 36px 0;
+    }
+
+    header section.bottom{
+        padding: 77px 0 35px 0;
+    }
+
+    header section.top #bar{
+        width: 105px;
+        height: 4px;
+        background-color: #EC6C6C;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    section.ebook{
+        color: #F6F7EB;
+        font-weight: 400;
+    }
+
+    section.ebook .text-area {
+        background-color: var(--color-blue);
+        padding: 34px 0 25px 0;
+    }
+
+    section.ebook h4, section.ebook p,  section.explication h4 {
+        margin: 0 auto;
+        font-weight: 400;
+    }
+
+    section.ebook h4,  section.explication h4{
+        font-size: 7.8125vw;
+        width: 65vw;
+    }
+
+    section.ebook p{
+        font-size: 5.625vw;
+        width: 81.25vw;
+    }
+
+    section.ebook .text-area img{
+        width: 54.0625vw;
+        margin: 34px auto;
+    }
+
+    section.ebook .btn-containe{
+        position: relative;
+        height: 61px;
+    }
+
+    .btn-background{
+        position: absolute;
+        z-index: 0;
+        background-color: var(--color-blue);
+        width: 100vw;
+        height: 8.75vw;
+        max-height: 54px;
+        margin-top: -1px;
+    }
+
+    section.ebook .btn-container a{ 
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 73.125vw;
+        margin: 0 auto;
+        padding: 17px 0;
+        font-size: 6.875vw;
+        border-radius: 5.78vw;
+    }
+
+    section.explication{
+        padding: 100px 0 53px 0;
+    }
+
+    section.explication .img-container img{
+        width: 38.75vw;
+        margin: 84px auto 14px auto;
+    }
+
+    section.explication .text-area p{
+        font-size: 5.625vw;
+        font-weight: 400;
+        width: 81.25vw;
+        margin: 0 auto;
+    }
+
+    section.explication .text-area p:nth-child(2){
+        margin: 52px auto;
+    }
+    
+    section.steps .step .img-container .background{
+        display: none;
+    }
+
+    section.steps .step .text-area{
+        padding-bottom: 56px;
+    }
+
+    section.steps .step .text-area h6{
+        font-weight: 700;
+        font-size: 6.56vw;
+    }
+
+    section.steps .step .text-area h5{
+        font-weight: 400;
+        font-size: 5.93vw;
+    }
+
+    section.steps .step .text-area p{
+        margin: 0 auto;
+        margin-top: 24px;
+        width: 73vw;
+        font-weight: 400;
+        font-size: 5.62vw;
+    }
+
+   #change-on-mobile{
+        display: block; 
+    }
+
+    .hide-on-mobile{
+        display: none;
+    }
+
+    section.sell{
+        padding-bottom: 84px;
+    }
+
+    section.sell .background{
+        height: 10.9375vw;
+        max-height: 350px;
+    }
+
+    section.sell .img-container picture img{
+        width: 74.375vw;
+        max-width: 400px;
+    }
+
+    section.sell .text-area p{
+        width: 76.25vw;
+        font-size: 7.8125vw;
+    }
+
+    section.sell .text-area p:nth-child(1){
+        margin-bottom: 72px;
+        margin-top: 26px;
+    }
+    
+    section.sell .btn-containe a{
+        font-size: 22px;
+        display: block;
+        width: 73.125vw;
+        max-width: 500px;
+        margin: 55px auto 36px auto;
+        padding: 17px 0;
+        border-radius: 18.95px;
+    }
+
+    section.sell .second-text-area p{
+        font-size: 4.375vw;
+    }
+
+    section.sell .second-text-area p:nth-child(1){
+        margin-bottom: 14px;
+    }
+
+    footer .lists-containers{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .lists-containers ul:nth-child(1){
+        margin-left: 0;
+        margin-bottom: 26px;
+    }
+
+    footer .direitos-reservados{
+        font: 12.5px;
+        margin-top: 18px;
+    }
+
+    /* FONT SIZE CHANGE */
+    @media screen and (min-width: 458px) {
+        header section.top h1{
+            width: 327px;
+            font-size: 40px;
+        }
+    }
+
+    @media screen and (min-width: 480px) {
+        section.steps .step .text-area h6{
+            font-size: 34px;
+        }
+    
+        section.steps .step .text-area h5{
+            font-size: 30px;
+        }
+    
+        section.steps .step .text-area p{
+            font-size: 26px
+         }
+    }
+
+}
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 769px) {
+
+    /* ALL SECTIONS */
+
+    h1{
+        width: 62.361vw;
+    }
+
+    h2{
+        width: 44.2361vw;
+    }
+
+    h3{
+        width: 56.4583vw;
+        margin-top: 25px;
+    }
+
+    h4{
+        font-size: 2.77vw;
+        font-weight: 400;
+    }
+
+    /* FOR EACH SECTION SEPARATION */
+
+    header section.bottom h2, header section.bottom h3, header section.top h1{
+        font-size: 2.9861vw;
+    }
+
+    header section.top{
+        padding: 120px 0 96px 0;
+    }
+
+    header section.bottom{
+        padding: 64px 0 49px 0;
+    }
+
+    h1 strong{
+        position: relative;
+        z-index: 9999;
+    }
+
+    h1 strong::after {
+        content: "";
+        width: 99%;
+        display: block;
+        height: 0.9vw;
+        max-height: 12px;
+        background: #EC6C6C;
+        top: 35%;
+        z-index: -1;
+        left: -4px;
+        position: absolute;
+    }
+
+
+    section.ebook, section.ebook .text-area, section.ebook .desktop-image-container img{
+        position: relative;
+        z-index: 9999;
+    }
+
+    section.ebook .btn-container{
+        z-index: 5;
+        margin-top: -5px;
+    }
+
+     .background-total{
+        z-index: 0;
+        position: absolute;
+        background: var(--color-blue);
+        width: 100vw;
+        height: 44vw;/*42.44vw*/
+        top: 0;
+        min-height: 375px;
+        max-height: 625px;
+    }
+    
+    section.ebook .content .btn-container{
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+
+    section.ebook .content .btn-container .btn-background{
+        width: 100%;
+        height: 50%;
+        background-color: var(--color-blue);
+        position: absolute;
+        z-index: -1;
+    }
+    
+    section.ebook{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding-top: 61px;
+    }
+
+    section.ebook .content{
+        text-align: right;
+        margin-left: 48px;
+    }
+
+    section.ebook .content .text-area{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        color: #F6F7EB;
+        width: 39.097vw;
+        max-width: 563px;
+    }
+
+    section.ebook .content .text-area p{
+        font-size: 1.66vw;
+        line-height: 164.4%;
+        margin: 3.61vw 0 6.94vw 0;
+        max-width: 507px;
+    }
+
+    section.ebook .content .text-area h4{
+        width: 34.236vw;
+        max-width: 493px;
+        margin-top: 5vw;
+    }
+
+    section.ebook .content .btn-container a{
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: 10vw;
+        width: 28.194vw;
+        max-width: 406px;
+        font-size: 2.222vw;
+        font-weight: 600;
+        border-radius: 40px;
+        padding: 14px 0;
+    }
+
+    section.ebook .desktop-image-container img{
+        width: 36.66vw;
+        max-width: 528px;
+    }
+
+    section.explication{
+        padding: 100px 0 60px 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    section.explication .text-area-container p:nth-child(1){
+        margin: 3.61vw 0 3.05vw 0;
+    }
+
+    section.explication .text-area-container p{
+        font-size: 1.6vw;
+    }
+
+    section.explication .text-area-container{
+        width: 43.40vw;
+        max-width: 625px;
+        margin-top: -35px;
+    }
+
+    section.explication .img-container img{
+        width: 25.83vw;
+        min-width: 260px;
+    }
+
+    section.steps{
+        position: relative;
+        width: 100vw;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding-bottom: 150px;
+    }
+
+    section.steps .width-adjust{
+        overflow-y: visible;
+        position: relative;
+        text-align: center;
+        display: flex;
+        align-items: start;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    section.steps .background{
+        position: absolute;
+        height: 48px;
+        width: 100vw;
+        top: -2px;
+        left: 0;
+        background-color: #FFF;
+    }
+
+    section.steps .step{
+        display: flex;
+        max-width: 250px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.steps .step .img-container img{
+        margin: 0 auto;
+    }
+
+    section.steps .step .img-container{
+        max-width: 100%;
+    }
+
+    section.steps .step .text-area{
+        max-width: 240px;
+    }
+
+    .hide-on-desktop{
+        display: none;
+    }
+
+    section.steps .step .text-area h6{
+        font-size: 21px;
+    }
+
+    section.steps .step .text-area h5, section.steps .step .text-area p{
+        font-size: 19px;
+    }
+
+    section.steps .step .text-area p{
+        margin-top: 24px;
+    }
+
+    section.steps .btn-container{
+        display: none;
+    }
+
+    section.sell{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-bottom: 120px;
+    }
+
+    section.sell .background{
+        height: 10.9375vw;
+    }
+
+    section.sell .img-container picture img{
+        width: 45.83vw;
+        max-width: 660px;
+    }
+
+    section.sell .text-area p{
+        width:  82.84vw;
+        max-width: 1139px;
+        font-size: 2.77vw;
+    }
+
+    section.sell .text-area p:nth-child(2){
+        font-size: 1.66vw;
+        width: 42.29vw;
+        max-width: 608px;
+    }
+
+    section.sell .text-area p:nth-child(1){
+        margin: 86px 0 41px 0;
+    }
+
+    section.sell .text-area p span:nth-child(2){
+        font-weight: 400;
+        color: #171717;
+    }
+    
+    section.sell .btn-containe a{
+        font-size: 3.08vw;
+        display: block;
+        width: 45.694vw;
+        max-width: 660px;
+        margin: 83px 0 53px 0;
+        padding: 17px 0;
+        border-radius: 53.3px;
+    }
+
+    section.sell .second-text-area p{
+        font-size: 1.736vw;
+    }
+
+    section.sell .second-text-area p:nth-child(1){
+        margin-bottom: 32px;
+    }
+
+    /* ADD BUTTON ON STEPS */
+    @media screen and (min-width: 1150px) {
+
+        .btn-container{
+            display: block;
+        }
+
+        section.steps{
+            padding-bottom: 0;
+        }
+
+        section.steps .btn-container{
+            display: block;
+            padding-bottom: 150px;
+        }
+
+        section.steps .step .text-area{
+            height: 322px;
+        }
+
+        section.steps .step .btn-container a, .disable-btn{
+            border-radius: 40px;
+            font-size: 14px;
+            padding: 6px 36px;
+        }
+
+        .disable-btn{
+            background-color: #F6F6F6;
+            border: 1px solid #D3D3D3;
+            color: #D7D7D7;
+        }
+    }
+
+    @media screen and (min-width: 1440px){
+        h1{
+            width: 898px;
+        }
+    
+        h2{
+            width: 637px;
+        }
+    
+        h3{
+            width: 813px;
+            margin-top: 25px;
+        }
+
+        h4{
+            font-size: 40px;
+        }
+    
+        header section.bottom h2, header section.bottom h3, header section.top h1{
+            font-size: 43px;
+        }
+    
+        header section.top{
+            padding: 120px 0 96px 0;
+        }
+    
+        header section.bottom{
+            padding: 64px 0 49px 0;
+        }
+        
+        section.ebook .content .text-area h4{
+            margin-top: 72px;
+        }
+
+        section.ebook .content .text-area p{
+            font-size: 24px;
+            margin: 53px 0 100px 0;
+        }
+
+        section.ebook .content .btn-container a{
+            font-size: 33.3px;
+            margin-right: 0;
+        }
+
+        section.explication .text-area-container p:nth-child(1){
+            margin: 52px 0 44px 0;
+        }
+
+        section.explication .text-area-container p{
+            font-size: 24px;
+        }
+
+        section.explication .img-container img{
+            max-width: 350px;
+        }
+
+        section.steps .step-different-width, section.steps .step .text-area{
+            max-width: 284px;
+        }
+
+        section.steps .step .text-area h6{
+            font-size: 21px;
+        }
+    
+        section.steps .step .text-area h5, section.steps .step .text-area p{
+            font-size: 19px;
+        }
+
+        section.steps .step .text-area p{
+            margin: 50px 0 15px 0 ;
+        }
+
+        section.sell .btn-containe a{
+            font-size: 44.4px;
+        }
+    
+        section.sell .second-text-area p{
+            font-size: 25px;
+        }
+
+        section.sell .text-area p{
+            font-size: 40px;
+        }
+    
+        section.sell .text-area p:nth-child(2){
+            font-size: 24px;
+        }
+
+        section.steps .step .btn-container a, .disable-btn{
+            font-size: 19px;
+        }
+
+        .background-total{
+            height: 47vw;
+            max-height: 655px;
+        }
+
+        section.ebook .content .btn-container{
+            position: relative;
+        }
+    
+        section.ebook .content .btn-container .btn-background{
+            display: none;
+        }
+
+
+
+    }
+}
